@@ -189,7 +189,7 @@ class DVHop:
         avgErr=0
         for idx in range(self.AchorCount,self.NodeCount):
             avgErr+=(math.sqrt(math.pow(self.BestPointXY[0,idx-self.AchorCount]-self.NodeCoordinate[0,idx],2)+math.pow(self.BestPointXY[1,idx-self.AchorCount]-self.NodeCoordinate[1,idx],2))/self.R)
-        avgErr=avgErr/self.GroupCount
+        avgErr=avgErr/self.UnknownCount
         return avgErr
 
 
